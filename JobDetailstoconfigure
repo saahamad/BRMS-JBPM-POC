@@ -1,0 +1,12 @@
+
+Steps the job schedule for clean up activities:
+
+1. Go to  -> Menu -> Manage -> jobs
+2. Select "New Job" then get a new window.
+3. Feed the given information to the window.
+~~~~~
+Business Key: Any string message
+Due On: choose "Run later" option and set the date and time for a job.
+Type: org.jbpm.executor.commands.LogCleanupCommand
+Retries: 1 or 2
+~~~~
