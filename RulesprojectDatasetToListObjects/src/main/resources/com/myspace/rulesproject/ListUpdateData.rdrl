@@ -1,0 +1,14 @@
+package com.myspace.rulesproject;
+
+import java.lang.Number;
+
+rule "ListUpdateData"
+	dialect "mvel"
+	when
+		fact : DataFact( entryId == 1001 )
+	then
+		modify( fact ) {
+				setResult( 100 )
+		}
+		fact.addResultToListEntries( fact );
+end
